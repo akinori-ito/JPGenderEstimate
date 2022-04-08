@@ -10,15 +10,19 @@ as_feature <- function(x,levels) {
   for (i in 1:nrow(x)) {
     cc <- stringr::str_split(x$name[i],"")[[1]]
     N <- length(cc)
-    if (N > 5) N <- 5
-    for (j in 1:N) {
-      res[i,j] <- as.integer(factor(cc[j],levels=levels))
+    if (N > 0) {
+      if (N > 5) N <- 5
+      for (j in 1:N) {
+        res[i,j] <- as.integer(factor(cc[j],levels=levels))
+      }
     }
     cc <- stringr::str_split(x$yomi[i],"")[[1]]
     N <- length(cc)
     if (N > 8) N <- 8
-    for (j in 1:N) {
-      res[i,j+5] <- as.integer(factor(cc[j],levels=levels))
+    if (N > 0) {
+      for (j in 1:N) {
+        res[i,j+5] <- as.integer(factor(cc[j],levels=levels))
+      }
     }
   }
   for (i in 1:13) {
