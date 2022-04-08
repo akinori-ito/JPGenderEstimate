@@ -2,7 +2,6 @@
 日本語の名前の漢字と平仮名から性別を推定します。
 
 ```{r}
-library(JPGenderEstimate)
 > library(JPGenderEstimate)
 > genderEstimate("芳雄","よしお")
 [1] 1.000199
