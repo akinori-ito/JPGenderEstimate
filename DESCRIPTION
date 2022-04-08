@@ -1,0 +1,15 @@
+Package: JPGenderEstimate
+Title: JPGenderEstimate: Estimate Gender from Name
+Version: 0.0.0.9000
+Authors@R: 
+    person("Akinori", "Ito", , "aito@spcom.ecei.tohoku.ac.jp", 
+           role = c("aut", "cre"))
+Description: Given a Japanese person's name in kanji and hiragana,
+    estimate gender of the name.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: 
+  stringr, 
+  xgboost
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
